@@ -8,6 +8,7 @@ public class EnemyUnit : AttackableUnit
     public float range = 5f;
     public float attackCooldown = 1.5f;
     public LayerMask defenderLayer;
+    public LayerMask towerLayer;
     
     [Header("Reward")]
     public int voltageReward = 10; // set per enemy type
@@ -15,6 +16,14 @@ public class EnemyUnit : AttackableUnit
     protected float attackTimer = 0f;
     
     public static event Action<int> OnEnemyDied;
+    
+    protected EnemyMovement movement;
+
+    protected override void Start()
+    {
+        base.Start(); // keep the health setup
+        movement = GetComponent<EnemyMovement>();
+    }
 
     protected virtual void Update()
     {
@@ -26,6 +35,14 @@ public class EnemyUnit : AttackableUnit
             Attack();
             attackTimer = attackCooldown;
         }
+    }
+    
+    protected Collider CheckIfTowerInRange()
+    {
+        Collider[] towers = Physics.OverlapSphere(transform.position, range, towerLayer);
+        if (towers.Length == 0) return null;
+
+        return towers[0];
     }
 
     // Helpers

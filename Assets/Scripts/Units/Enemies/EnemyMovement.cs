@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
         foreach (Vector2Int tile in path)
         {
             Vector3 wp = grid.GridToWorld(tile);
-            wp.y = 1.5f; // ensure correct height
+            wp.y = 1f; // ensure correct height
             waypoints.Add(wp);
         }
 

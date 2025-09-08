@@ -9,6 +9,7 @@ public class GridManager : MonoBehaviour
     public GameObject block1Prefab;
     public GameObject block2Prefab;
     public GameObject pathPrefab;
+    public GameObject towerPrefab;
 
     [Header("Grid Settings")]
     public int gridWidth = 10;
@@ -37,6 +38,7 @@ public class GridManager : MonoBehaviour
         CarvePathWithAStar();     // Step 2
         InstantiateFromGrid();    // Step 3
         GenerateDefenderSpots(); // Step 4
+        SpawnTower();
     }
 
     // -------------------- Step 1: Generate Grid with WFC -------------------- //
@@ -215,7 +217,7 @@ public class GridManager : MonoBehaviour
     
     public Vector3 GridToWorld(Vector2Int gridPos)
     {
-        return new Vector3(gridPos.x * horizontalSpacing, 1.5f, gridPos.y * depthSpacing);
+        return new Vector3(gridPos.x * horizontalSpacing, 1f, gridPos.y * depthSpacing);
     }
 
     // -------------------- Step 3: Instantiate -------------------- //
@@ -319,6 +321,18 @@ public class GridManager : MonoBehaviour
                     Debug.LogWarning("DefenderSpot prefab is missing a DefenderSpot component.");
                 }
             }
+        }
+    }
+
+    void SpawnTower()
+    {
+        // Spawn the tower in the middle of the grid
+        if (towerPrefab != null)
+        {
+            Vector2Int center = new Vector2Int(gridWidth / 2, gridDepth / 2);
+            Vector3 towerPos = new Vector3(center.x * horizontalSpacing, 2.5f, center.y * depthSpacing);
+
+            Instantiate(towerPrefab, towerPos, Quaternion.identity, transform);
         }
     }
 }

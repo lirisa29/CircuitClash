@@ -23,7 +23,9 @@ public class EnemySpawner : MonoBehaviour
     [Header("Waves")]
     public List<EnemyWave> waves = new List<EnemyWave>();
     private int currentWaveIndex = 0;
+    private int wavesSurvived = 0;
     public int CurrentWave => currentWaveIndex + 1;
+    public int WavesSurvived => wavesSurvived + 1;
 
     [Header("Dependencies")]
     private GridManager gridManager;
@@ -68,6 +70,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(wave.timeBeforeNextWave);
 
         currentWaveIndex++;
+        wavesSurvived++;
         if (currentWaveIndex < waves.Count)
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
         else

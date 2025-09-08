@@ -8,15 +8,29 @@ public class BitBugEnemy : EnemyUnit
 
     protected override void Attack()
     {
-        Collider target = GetFirstDefenderInRange();
-        
+        Collider target = CheckIfTowerInRange();
+
         if (target != null)
         {
-            // Damage first defender
+            // Tower in range -> stop moving
+            if (movement != null && movement.stopMovement != null)
+                movement.stopMovement.value = true;
+        }
+        else
+        {
+            // No tower -> resume movement
+            if (movement != null && movement.stopMovement != null)
+                movement.stopMovement.value = false;
+
+            // Try defenders instead
+            target = GetFirstDefenderInRange();
+        }
+
+        if (target != null)
+        {
             AttackableUnit mainTarget = target.GetComponent<AttackableUnit>();
             if (mainTarget != null)
             {
-                // Spawn projectile
                 GameObject projObj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
                 Projectile proj = projObj.GetComponent<Projectile>();
                 proj.Initialize(mainTarget, damage);
