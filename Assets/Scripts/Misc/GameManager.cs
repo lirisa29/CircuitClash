@@ -15,8 +15,12 @@ public class GameManager : MonoBehaviour
     
     [Header("UI References")]
     public GameObject gameOverPanel;
+    public GameObject pausePanel;
     public TextMeshProUGUI wavesSurvivedText;
     public Button restartButton;
+    public Button playAgainButton;
+    public Button resumeButton;
+    public Button pauseButton;
     
     private int wavesSurvived;
 
@@ -26,9 +30,13 @@ public class GameManager : MonoBehaviour
         
         // Hide GameOver panel initially
         gameOverPanel.SetActive(false);
+        pausePanel.SetActive(false);
 
         // Add listener for button
         restartButton.onClick.AddListener(OnRestartButtonClicked);
+        playAgainButton.onClick.AddListener(OnRestartButtonClicked);
+        resumeButton.onClick.AddListener(OnResumeButtonClicked);
+        pauseButton.onClick.AddListener(OnPauseButtonClicked);
     }
 
     // Called when the tower dies
@@ -51,5 +59,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         // Reload current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void OnResumeButtonClicked()
+    {
+        Time.timeScale = 1f;
+        pausePanel.SetActive(false);
+    }
+
+    private void OnPauseButtonClicked()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

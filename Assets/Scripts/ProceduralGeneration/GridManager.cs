@@ -257,7 +257,7 @@ public class GridManager : MonoBehaviour
         }
     }
     
-    // -------------------- Step 4: Place Defender Spots on Generated Terrain -------------------- //
+    // -------------------- Step 4: Place Defender Spots and Tower on Generated Terrain -------------------- //
     void GenerateDefenderSpots()
     {
         defenderSpots.Clear();
@@ -315,10 +315,6 @@ public class GridManager : MonoBehaviour
                 {
                     // Initialise the spot with grid coordinates + available defenders for the current wave
                     spotScript.Initialise(spot, defenders);
-                }
-                else
-                {
-                    Debug.LogWarning("DefenderSpot prefab is missing a DefenderSpot component.");
                 }
             }
         }

@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class DefenderUnit : AttackableUnit
@@ -18,6 +19,18 @@ public class DefenderUnit : AttackableUnit
     public bool isOverclocked = false;
     public float overclockDuration = 10f;
     private float overclockTimer;
+    
+    private int wavesSurvivedAlive = 0; 
+    private MeshRenderer[] meshRenderers;
+    private Color originalColor;
+    public Color overclockGlowColor = Color.cyan;
+    
+    protected virtual void Awake()
+    {
+        meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        if (meshRenderers.Length > 0)
+            originalColor = meshRenderers[0].material.color;
+    }
 
     protected virtual void Update()
     {
@@ -31,16 +44,42 @@ public class DefenderUnit : AttackableUnit
             }
         }
     }
+    
+    public void OnWaveCompleted()
+    {
+        wavesSurvivedAlive++;
+        if (wavesSurvivedAlive % 5 == 0)
+        {
+            ActivateOverclock();
+        }
+    }
 
     public void ActivateOverclock()
     {
         isOverclocked = true;
         overclockTimer = overclockDuration;
         OnOverclockStart();
+
+        // Glow effect
+        foreach (var mr in meshRenderers)
+        {
+            mr.material.SetColor("_EmissionColor", overclockGlowColor * 2f);
+            mr.material.EnableKeyword("_EMISSION");
+        }
     }
 
     protected virtual void OnOverclockStart() { }
-    protected virtual void OnOverclockEnd() { }
+
+    protected virtual void OnOverclockEnd()
+    {
+        // Reset glow
+        foreach (var mr in meshRenderers)
+        {
+            mr.material.SetColor("_EmissionColor", Color.black);
+            mr.material.DisableKeyword("_EMISSION");
+            mr.material.color = originalColor;
+        }
+    }
 
     // Helpers
     protected Collider[] GetEnemiesInRange()
@@ -114,24 +153,4 @@ public class DefenderUnit : AttackableUnit
     }
 
     protected override void Attack() { }
-
-    private void OnDrawGizmosSelected()
-    {
-        // Debugging: visualize attack range + angle
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-
-        // Draw forward direction
-        Vector3 forward = transform.forward * range;
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position + forward);
-
-        // Draw angle lines
-        Quaternion leftRot = Quaternion.AngleAxis(-attackAngle * 0.5f, Vector3.up);
-        Quaternion rightRot = Quaternion.AngleAxis(attackAngle * 0.5f, Vector3.up);
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + leftRot * forward);
-        Gizmos.DrawLine(transform.position, transform.position + rightRot * forward);
-    }
 }

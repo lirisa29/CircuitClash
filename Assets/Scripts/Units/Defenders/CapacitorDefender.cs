@@ -22,6 +22,10 @@ public class CapacitorDefender : DefenderUnit
                 chargeTimer = 0f;
             }
         }
+        else
+        {
+            Attack();
+        }
     }
 
     protected override void Attack()

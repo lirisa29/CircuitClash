@@ -10,7 +10,9 @@ public class DefenderSelectionUI : MonoBehaviour
     [Header("UI References")]
     public GameObject defenderCardPrefab;   // prefab for each defender card
     public Transform cardParent;         // parent container for cards
-    public GameObject panel;             // the full selection panel
+    public GameObject panel; // the full selection panel
+    public TextMeshProUGUI notEnoughVoltageText;
+    public Button backButton;
 
     private DefenderSpot activeSpot;
 
@@ -18,6 +20,14 @@ public class DefenderSelectionUI : MonoBehaviour
     {
         Instance = this;
         Hide();
+        
+        // Hook up back button
+        if (backButton != null)
+            backButton.onClick.AddListener(Hide);
+
+        // Hide the "not enough voltage" text by default
+        if (notEnoughVoltageText != null)
+            notEnoughVoltageText.gameObject.SetActive(false);
     }
 
     public void Show(DefenderData[] towers, DefenderSpot spot)
@@ -39,7 +49,7 @@ public class DefenderSelectionUI : MonoBehaviour
 
             card.transform.Find("Icon").GetComponent<Image>().sprite = tower.defenderSprite;
             card.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = tower.defenderName;
-            card.transform.Find("Cost").GetComponent<TextMeshProUGUI>().text = tower.voltageCost.ToString();
+            card.transform.Find("Cost").GetComponent<TextMeshProUGUI>().text = $"{tower.voltageCost.ToString()} V";
             card.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = 
                 $"{tower.description}\nEffect: {tower.effect}\nOverclock: {tower.overclockBonus}";
 
@@ -49,7 +59,7 @@ public class DefenderSelectionUI : MonoBehaviour
             {
                 // Locked → disable interaction + gray out
                 btn.interactable = false;
-                card.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
+                card.GetComponent<Image>().color = new Color(19f, 247f, 0f, 0.3f);
             }
             else
             {
@@ -78,7 +88,20 @@ public class DefenderSelectionUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough voltage to place tower.");
+            if (notEnoughVoltageText != null)
+            {
+                notEnoughVoltageText.gameObject.SetActive(true);
+
+                // auto-hide after 2 seconds
+                CancelInvoke(nameof(HideNotEnoughVoltageText));
+                Invoke(nameof(HideNotEnoughVoltageText), 2f);
+            }
         }
+    }
+    
+    private void HideNotEnoughVoltageText()
+    {
+        if (notEnoughVoltageText != null)
+            notEnoughVoltageText.gameObject.SetActive(false);
     }
 }

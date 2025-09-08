@@ -93,10 +93,4 @@ public class TowerUnit : AttackableUnit
         GameManager.Instance.ShowGameOver();
         Destroy(gameObject);
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
 }

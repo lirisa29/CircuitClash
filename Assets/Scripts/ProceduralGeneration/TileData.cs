@@ -5,8 +5,7 @@ public enum TileType
     Base,
     Block1,
     Block2,
-    Path,
-    Socket
+    Path
 }
 
 public class TileData

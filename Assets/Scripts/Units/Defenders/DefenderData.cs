@@ -25,10 +25,4 @@ public class DefenderData : ScriptableObject
     public string effect;
     [TextArea(2, 4)] 
     public string overclockBonus;
-
-    [Header("Stats (Optional)")]
-    public int damage;
-    public float attackSpeed;
-    public float range;
-    public float specialValue;
 }

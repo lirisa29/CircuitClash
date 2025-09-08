@@ -6,14 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="4f55939b-3177-4469-99a6-99cfb9d9fcf9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CircuitClash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CircuitClash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefenderSpot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/M_DefenderSpot.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CardPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CardPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Defender.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/BitBugEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/BitBugEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/TileData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/TileData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderRotationUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderRotationUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderSelectionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderSelectionUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/AttackableUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/AttackableUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/CapacitorDefender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/CapacitorDefender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderSpot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderUnit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Tower/TowerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Tower/TowerUnit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +124,7 @@
       <updated>1756738126472</updated>
       <workItem from="1756738129806" duration="2764000" />
       <workItem from="1757274618757" duration="290000" />
-      <workItem from="1757303533178" duration="5006000" />
+      <workItem from="1757303533178" duration="22268000" />
     </task>
     <servers />
   </component>

@@ -31,11 +31,49 @@ public class DefenderRotationUI : MonoBehaviour
         currentDefender = defender;
         activeSpot = spot;
         panel.SetActive(true);
+        
+        // Find the RangeIndicator component in the defender prefab
+        RangeIndicator range = currentDefender.GetComponentInChildren<RangeIndicator>(true);
+        if (range != null)
+        {
+            range.gameObject.SetActive(true);
+        }
+        
+        // Disable Defender behaviour while editing
+        MonoBehaviour defenderScript = currentDefender.GetComponent<DefenderUnit>();
+        if (defenderScript != null)
+        {
+            defenderScript.enabled = false;
+        }
+        
+        Collider col = currentDefender.GetComponent<Collider>();
+        if (col != null)
+            col.enabled = false;
     }
 
     public void Hide()
     {
         panel.SetActive(false);
+        
+        if (currentDefender != null)
+        {
+            // Hide the range indicator
+            RangeIndicator range = currentDefender.GetComponentInChildren<RangeIndicator>(true);
+            if (range != null)
+                range.gameObject.SetActive(false);
+            
+            // Re-enable Defender behaviour after editing
+            MonoBehaviour defenderScript = currentDefender.GetComponent<DefenderUnit>();
+            if (defenderScript != null)
+            {
+                defenderScript.enabled = true;
+            }
+            
+            Collider col = currentDefender.GetComponent<Collider>();
+            if (col != null)
+                col.enabled = true;
+        }
+        
         currentDefender = null;
         activeSpot = null;
     }

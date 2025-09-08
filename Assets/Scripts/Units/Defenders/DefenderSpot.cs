@@ -45,11 +45,6 @@ public class DefenderSpot : MonoBehaviour, IPointerClickHandler
         DefenderRotationUI.Instance.Show(currentDefender, this);
     }
 
-    public void ConfirmDefenderPlacement()
-    {
-        defenderPreview = null; // Clear preview state after confirmation
-    }
-
     public void DestroyDefender()
     {
         if (currentDefender != null)

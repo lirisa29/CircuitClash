@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -32,7 +33,11 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Formation Settings")]
     public float enemySpacing = 1f; // spacing between enemies in a column
-    
+
+    [Header("UI References")]
+    public TextMeshProUGUI waveMessageText;
+    public float firstWaveDelay = 10f; // delay before first wave starts
+
     IEnumerator Start()
     {
         gridManager = FindFirstObjectByType<GridManager>();
@@ -45,6 +50,25 @@ public class EnemySpawner : MonoBehaviour
 
         if (waves.Count > 0)
         {
+            // Show "Place your defenders" before first wave
+            if (waveMessageText != null)
+            {
+                waveMessageText.text = "Place your defenders!";
+                waveMessageText.gameObject.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(firstWaveDelay);
+
+            // Show upcoming wave message
+            if (waveMessageText != null)
+            {
+                waveMessageText.text = $"Wave {CurrentWave} is about to start!";
+            }
+
+            yield return new WaitForSeconds(4f); // short display before wave starts
+
+            waveMessageText.gameObject.SetActive(false);
+
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
         }
     }
@@ -71,10 +95,41 @@ public class EnemySpawner : MonoBehaviour
 
         currentWaveIndex++;
         wavesSurvived++;
+        
+        // Wave ended, notify towers
+        DefenderUnit[] allDefenders = FindObjectsByType<DefenderUnit>(FindObjectsSortMode.None);
+        foreach (var defender in allDefenders)
+        {
+            defender.OnWaveCompleted();
+        }
+        
         if (currentWaveIndex < waves.Count)
+        {
+            // Announce next wave before spawning
+            if (waveMessageText != null)
+            {
+                waveMessageText.text = $"Wave {WavesSurvived} is about to start!";
+                waveMessageText.gameObject.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(4f);
+            waveMessageText.gameObject.SetActive(false);
+
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
+        }
         else
         {
+            // Announce next wave before spawning
+            if (waveMessageText != null)
+            {
+                waveMessageText.text = $"Wave {WavesSurvived} is about to start!";
+                waveMessageText.gameObject.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(4f);
+            waveMessageText.gameObject.SetActive(false);
+            
+            // If looping, reset to wave 0
             currentWaveIndex = 0;
             StartCoroutine(SpawnWave(waves[currentWaveIndex]));
         }
