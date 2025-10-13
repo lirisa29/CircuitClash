@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,9 +11,25 @@ public class EnemyMovement : MonoBehaviour
     public int CurrentIndex => currentIndex;
 
     private float formationOffset = 0f;
+    
+    private float originalSpeed;
+    private Coroutine slowRoutine;
+    private Coroutine stunRoutine;
+    private bool isStunned = false;
 
     // shared stop flag for the group
     [HideInInspector] public BoolWrapper stopMovement;
+    
+    void Start()
+    {
+        originalSpeed = speed;
+    }
+    
+    public void SetBaseSpeed(float newSpeed)
+    {
+        originalSpeed = newSpeed;
+        speed = newSpeed;
+    }
 
     public void InitPath(List<Vector2Int> path, GridManager grid, float offset = 0f, BoolWrapper groupStopFlag = null)
     {
@@ -55,6 +72,39 @@ public class EnemyMovement : MonoBehaviour
                 stopMovement.value = true;
             }
         }
+    }
+    
+    public void ApplySlow(float slowFactor, float duration)
+    {
+        if (slowRoutine != null)
+            StopCoroutine(slowRoutine);
+        slowRoutine = StartCoroutine(SlowCoroutine(slowFactor, duration));
+    }
+
+    private IEnumerator SlowCoroutine(float factor, float duration)
+    {
+        speed = originalSpeed * (1f - factor);
+        yield return new WaitForSeconds(duration);
+        speed = originalSpeed;
+    }
+
+    public void Stun(float duration)
+    {
+        if (stunRoutine != null)
+            StopCoroutine(stunRoutine);
+        stunRoutine = StartCoroutine(StunCoroutine(duration));
+    }
+
+    private IEnumerator StunCoroutine(float duration)
+    {
+        isStunned = true;
+        float storedSpeed = speed;
+        speed = 0f;
+
+        yield return new WaitForSeconds(duration);
+
+        speed = originalSpeed;
+        isStunned = false;
     }
 }
 

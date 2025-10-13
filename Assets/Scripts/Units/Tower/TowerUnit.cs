@@ -23,7 +23,8 @@ public class TowerUnit : AttackableUnit
         fireCooldown -= Time.deltaTime;
 
         // Acquire target if needed
-        if (currentTarget == null || !currentTarget.GetComponent<AttackableUnit>().IsAlive ||
+        if (currentTarget == null || 
+            !currentTarget.GetComponentInParent<AttackableUnit>()?.IsAlive == true || 
             Vector3.Distance(transform.position, currentTarget.transform.position) > range)
         {
             currentTarget = GetFirstEnemyInRange();
@@ -41,7 +42,7 @@ public class TowerUnit : AttackableUnit
     {
         if (currentTarget == null) return;
 
-        AttackableUnit enemyUnit = currentTarget.GetComponent<AttackableUnit>();
+        AttackableUnit enemyUnit = currentTarget.GetComponentInParent<AttackableUnit>();
         if (enemyUnit != null)
         {
             FireLaser(enemyUnit, damage);

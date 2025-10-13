@@ -36,7 +36,7 @@ public class CapacitorDefender : DefenderUnit
             Collider[] enemies = GetEnemiesInRange();
             foreach (Collider enemy in enemies)
             {
-                AttackableUnit unit = enemy.GetComponent<AttackableUnit>();
+                AttackableUnit unit = enemy.GetComponentInParent<AttackableUnit>();
                 if (unit != null)
                 {
                     FireLaser(unit, damage * shockwaveDamageMultiplier);
@@ -50,7 +50,7 @@ public class CapacitorDefender : DefenderUnit
             if (target != null)
             {
                 // Damage first enemy
-                AttackableUnit mainTarget = target.GetComponent<AttackableUnit>();
+                AttackableUnit mainTarget = target.GetComponentInParent<AttackableUnit>();
                 if (mainTarget != null)
                     FireLaser(mainTarget, damage);
             }

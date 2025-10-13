@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class BitBugEnemy : EnemyUnit
+public class OverloaderEnemy : EnemyUnit
 {
-    [Header("BitBug Settings")]
+    [Header("Overloader Settings")]
     public GameObject projectilePrefab;
     public Transform firePoint;
+    
+    public float explosionRadius = 2.5f;
+    public float explosionDamage = 30f;
 
     protected override void Attack()
     {
@@ -36,5 +39,31 @@ public class BitBugEnemy : EnemyUnit
                 proj.Initialize(mainTarget, damage);
             }
         }
+    }
+
+    protected override void Die()
+    {
+        // Explosion on death before actual destroy
+        ExplodeOnDeath();
+
+        // Give reward + destroy
+        base.Die();
+    }
+
+    private void ExplodeOnDeath()
+    {
+        Collider[] nearbyTowers = Physics.OverlapSphere(transform.position, explosionRadius, towerLayer);
+
+        foreach (var towerCollider in nearbyTowers)
+        {
+            AttackableUnit tower = towerCollider.GetComponent<AttackableUnit>();
+            if (tower != null && tower.IsAlive)
+            {
+                tower.TakeDamage(explosionDamage);
+            }
+        }
+
+        // Optional: Add explosion VFX or sound
+        // Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
     }
 }

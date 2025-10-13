@@ -6,25 +6,51 @@
   <component name="ChangeListManager">
     <list default="true" id="4f55939b-3177-4469-99a6-99cfb9d9fcf9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CircuitClash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CircuitClash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefenderSpot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/M_DefenderSpot.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CardPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CardPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Defender.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/TileData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/TileData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderRotationUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderRotationUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderSelectionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderSelectionUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/AttackableUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/AttackableUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Base.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Base.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Block1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Block1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Block2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Block2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Defender.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Defender.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefenderSpot.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefenderSpot.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Edge.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Edge.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Enemy.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Enemy.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Path.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Path.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Tower.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_Tower.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-1jaAB SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-1jaAB SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-R9JZ6 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-R9JZ6 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Block1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Block1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Block2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Block2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defender.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defender.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefenderSpot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DefenderSpot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Edge.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Edge.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Path.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Path.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/InductorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/InductorData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ResistorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/ResistorData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/CapacitorDefender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/CapacitorDefender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderSpot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/BitBugEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/BitBugEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Tower/TowerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Tower/TowerUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +72,7 @@
     &quot;accountId&quot;: &quot;df9d0b41-7b89-480a-93ee-7bba36e3c846&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -124,13 +151,16 @@
       <updated>1756738126472</updated>
       <workItem from="1756738129806" duration="2764000" />
       <workItem from="1757274618757" duration="290000" />
-      <workItem from="1757303533178" duration="22268000" />
+      <workItem from="1757303533178" duration="24472000" />
+      <workItem from="1757412622458" duration="121000" />
+      <workItem from="1760358700672" duration="8424000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />

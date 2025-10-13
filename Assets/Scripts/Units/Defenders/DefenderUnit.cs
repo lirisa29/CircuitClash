@@ -112,7 +112,7 @@ public class DefenderUnit : AttackableUnit
 
         foreach (var enemy in enemies)
         {
-            EnemyMovement movement = enemy.GetComponent<EnemyMovement>();
+            EnemyMovement movement = enemy.GetComponentInParent<EnemyMovement>();
             if (movement != null)
             {
                 if (movement.CurrentIndex > bestProgress)
