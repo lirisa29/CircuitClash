@@ -15,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
     private float originalSpeed;
     private Coroutine slowRoutine;
     private Coroutine stunRoutine;
-    private bool isStunned = false;
 
     // shared stop flag for the group
     [HideInInspector] public BoolWrapper stopMovement;
@@ -97,14 +96,12 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator StunCoroutine(float duration)
     {
-        isStunned = true;
         float storedSpeed = speed;
         speed = 0f;
 
         yield return new WaitForSeconds(duration);
 
         speed = originalSpeed;
-        isStunned = false;
     }
 }
 

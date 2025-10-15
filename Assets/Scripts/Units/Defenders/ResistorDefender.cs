@@ -29,14 +29,9 @@ public class ResistorDefender : DefenderUnit
         }
     }
 
-    protected override void Attack()
-    {
-        // unused — override with parameter below
-    }
-
     private void Attack(AttackableUnit target)
     {
-        FireLaser(target, damage);
+        FireLaser(target, 0f);
 
         // Apply slow + stun if needed
         EnemyMovement movement = target.GetComponentInParent<EnemyMovement>();

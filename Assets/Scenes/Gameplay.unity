@@ -766,13 +766,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b144c89091b62e41a8e83b5048c2d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - waveName: Wave 1
-    enemyGroups:
-    - enemyPrefab: {fileID: 8468495945917922353, guid: baad246953e709e4b94fb66bdb388b08, type: 3}
-      count: 3
-      spawnInterval: 1
-    timeBeforeNextWave: 20
+  enemyTypes:
+  - prefab: {fileID: 8468495945917922353, guid: baad246953e709e4b94fb66bdb388b08, type: 3}
+    cost: 2
+    spawnInterval: 0.4
+    tier: 0
+  - prefab: {fileID: 8468495945917922353, guid: 2f5fb468a450aa94d8a34a1ca9fa2aff, type: 3}
+    cost: 3
+    spawnInterval: 1.2
+    tier: 1
+  - prefab: {fileID: 8468495945917922353, guid: 966f2860265009146ba7b930e4e092ec, type: 3}
+    cost: 4
+    spawnInterval: 1
+    tier: 2
+  difficultyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0.6666668
+      outSlope: 0.6666668
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.15
+      value: 0.6
+      inSlope: 0.8333333
+      outSlope: 0.8333333
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.3
+      value: 0.75
+      inSlope: 1.1666666
+      outSlope: 1.1666666
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.45
+      value: 0.95
+      inSlope: 1.1588562
+      outSlope: 1.1588562
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50079346
+      value: 1
+      inSlope: 0.8272954
+      outSlope: 0.8272954
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.65
+      value: 1.1
+      inSlope: 0.96010596
+      outSlope: 0.96010596
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.85
+      value: 1.35
+      inSlope: 1.1249999
+      outSlope: 1.1249999
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1.5
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  baseWaveBudget: 20
+  mutationRate: 0.15
   enemySpacing: 2
   waveMessageText: {fileID: 1991116236}
   firstWaveDelay: 10
@@ -788,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bacdd9f2f2d37468aec71372b4b431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingVoltage: 100
+  startingVoltage: 150
   voltageText: {fileID: 1167954829}
 --- !u!114 &376017340
 MonoBehaviour:

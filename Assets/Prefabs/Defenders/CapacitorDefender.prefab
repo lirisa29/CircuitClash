@@ -396,12 +396,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd54ad2b1228d941a2a66d00c8d899b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   currentHealth: 0
   healthBar: {fileID: 1545271804324326624}
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   flashDuration: 0.2
-  damage: 50
+  damage: 15
   range: 5
   attackAngle: 180
   enemyLayer:
@@ -414,7 +414,7 @@ MonoBehaviour:
   overclockDuration: 30
   overclockGlowColor: {r: 0, g: 1, b: 1, a: 1}
   chargeTime: 1
-  shockwaveDamageMultiplier: 1.5
+  shockwaveDamageMultiplier: 3.3
 --- !u!1001 &3077191795338686164
 PrefabInstance:
   m_ObjectHideFlags: 0

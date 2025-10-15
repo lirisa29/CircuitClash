@@ -62,8 +62,5 @@ public class OverloaderEnemy : EnemyUnit
                 tower.TakeDamage(explosionDamage);
             }
         }
-
-        // Optional: Add explosion VFX or sound
-        // Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
     }
 }

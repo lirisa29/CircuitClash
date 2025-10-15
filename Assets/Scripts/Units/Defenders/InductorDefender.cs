@@ -30,11 +30,6 @@ public class InductorDefender : DefenderUnit
         }
     }
 
-    protected override void Attack()
-    {
-        // not used
-    }
-
     private void Attack(AttackableUnit firstTarget)
     {
         int totalBounces = baseBounceCount + (isOverclocked ? extraOverclockBounces : 0);
@@ -76,7 +71,7 @@ public class InductorDefender : DefenderUnit
 
     protected override void OnOverclockStart()
     {
-        // Optional: fire instantly
+        // fire instantly
         var target = GetNextEnemyInRange();
         if (target != null)
         {

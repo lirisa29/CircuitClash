@@ -46,7 +46,7 @@ public class DefenderRotationUI : MonoBehaviour
             defenderScript.enabled = false;
         }
         
-        Collider col = currentDefender.GetComponent<Collider>();
+        Collider col = currentDefender.GetComponentInChildren<Collider>();
         if (col != null)
             col.enabled = false;
     }
@@ -69,7 +69,7 @@ public class DefenderRotationUI : MonoBehaviour
                 defenderScript.enabled = true;
             }
             
-            Collider col = currentDefender.GetComponent<Collider>();
+            Collider col = currentDefender.GetComponentInChildren<Collider>();
             if (col != null)
                 col.enabled = true;
         }

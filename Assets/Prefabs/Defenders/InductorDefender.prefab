@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 7170420946146324082}
   - component: {fileID: 4928772620960307896}
   - component: {fileID: 2365687934540627853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,9 +309,9 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.38335323, a: 1}
-      key1: {r: 0, g: 1, b: 0.7775514, a: 1}
-      key2: {r: 1, g: 1, b: 1, a: 0}
+      key0: {r: 1, g: 0.111953415, b: 0, a: 1}
+      key1: {r: 0.92503774, g: 1, b: 0, a: 1}
+      key2: {r: 0.92503774, g: 1, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -401,7 +401,7 @@ MonoBehaviour:
   healthBar: {fileID: 1545271804324326624}
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   flashDuration: 0.2
-  damage: 20
+  damage: 25
   range: 5
   attackAngle: 180
   enemyLayer:
@@ -412,7 +412,7 @@ MonoBehaviour:
   firePoint: {fileID: 1628215761566754638}
   isOverclocked: 0
   overclockDuration: 10
-  overclockGlowColor: {r: 0, g: 1, b: 1, a: 1}
+  overclockGlowColor: {r: 0.88946295, g: 1, b: 0, a: 1}
   fireCooldown: 2
   baseBounceCount: 3
   extraOverclockBounces: 2

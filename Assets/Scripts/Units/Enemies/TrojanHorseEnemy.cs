@@ -45,7 +45,7 @@ public class TrojanHorseEnemy : EnemyUnit
         base.TakeDamage(dmg);
     }
     
-    // Reveal into true form: swap visuals, update stats, play VFX/SFX.
+    // Reveal into true form: swap visuals, update stats
     private void Reveal()
     {
         hasRevealed = true;

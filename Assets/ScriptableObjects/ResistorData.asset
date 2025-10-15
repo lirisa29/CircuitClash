@@ -16,8 +16,8 @@ MonoBehaviour:
   defenderType: 0
   defenderPrefab: {fileID: 8468495945917922353, guid: 14305d77a1fd9704fbf536d1d74958d0, type: 3}
   defenderSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  voltageCost: 0
-  unlockedWave: 6
+  voltageCost: 75
+  unlockedWave: 5
   description: Basic Slowing Tower
   effect: Reduces enemy speed
   overclockBonus: Creates short stun burst
