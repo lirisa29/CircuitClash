@@ -16,8 +16,8 @@ MonoBehaviour:
   defenderType: 2
   defenderPrefab: {fileID: 8468495945917922353, guid: 1a7b29b8b6bb33e4f8d2962558788a43, type: 3}
   defenderSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  voltageCost: 50
-  unlockedWave: 1
+  voltageCost: 100
+  unlockedWave: 10
   description: Chain Lightning Tower
   effect: Bounces damage across enemies
   overclockBonus: Adds extra bounces + stun
