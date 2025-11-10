@@ -633,7 +633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7457097258337733077
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,7 +2047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3517940068095366369
 Transform:
   m_ObjectHideFlags: 0
@@ -2219,7 +2219,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   voltageReward: 10
-  projectilePrefab: {fileID: 832913065017019776, guid: 63ea7cd81808d0346a2575e574d53f03, type: 3}
+  projectilePrefab: {fileID: 832913065017019776, guid: afc8558565c90134a8b9b6328f1e86f4, type: 3}
   firePoint: {fileID: 174379771305771595}
   startDisguised: 1
   disguisedModel: {fileID: 2675638005410195997}

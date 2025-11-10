@@ -2076,7 +2076,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   voltageReward: 10
-  projectilePrefab: {fileID: 832913065017019776, guid: 63ea7cd81808d0346a2575e574d53f03, type: 3}
+  projectilePrefab: {fileID: 832913065017019776, guid: 99aac9d6cfe0d5f4696f11444610d40f, type: 3}
   firePoint: {fileID: 174379771305771595}
 --- !u!1 &8717406533557479202
 GameObject:

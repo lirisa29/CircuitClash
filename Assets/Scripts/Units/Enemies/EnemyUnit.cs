@@ -74,8 +74,6 @@ public class EnemyUnit : AttackableUnit
 
         // Broadcast death event with reward
         OnEnemyDied?.Invoke(voltageReward);
-
-        Destroy(gameObject);
     }
     
     protected override void Attack() { }

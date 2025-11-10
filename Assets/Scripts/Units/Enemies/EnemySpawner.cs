@@ -79,10 +79,14 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Dependencies")]
     private GridManager gridManager;
+    private ProceduralMusicGenerator musicGenerator;
+    private ProceduralPercussionGenerator percussionGenerator;
 
     IEnumerator Start()
     {
         gridManager = FindFirstObjectByType<GridManager>();
+        musicGenerator = FindFirstObjectByType<ProceduralMusicGenerator>();
+        percussionGenerator = FindFirstObjectByType<ProceduralPercussionGenerator>();
 
         while (gridManager.enemyPaths.Count == 0)
             yield return null;
@@ -122,6 +126,17 @@ public class EnemySpawner : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
         waveMessageText.gameObject.SetActive(false);
+        
+        // Update procedural music difficulty
+        float progress = NormalizeWaveIndex(currentWaveIndex);
+        float difficultyFactor = difficultyCurve.Evaluate(progress);
+        int musicDifficulty = Mathf.Clamp(Mathf.RoundToInt(difficultyFactor * 5f), 1, 5);
+
+        if (musicGenerator != null)
+            musicGenerator.SetDifficulty(musicDifficulty);
+        
+        if (percussionGenerator != null)
+            percussionGenerator.SetDifficulty(musicDifficulty);
 
         EnemyWave wave = GenerateWave(currentWaveIndex);
 

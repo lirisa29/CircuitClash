@@ -63,6 +63,13 @@ public class TrojanHorseEnemy : EnemyUnit
             movement.SetBaseSpeed(revealedSpeed);
         }
     }
+    
+    protected override void Die()
+    {
+        base.Die();
+        
+        Destroy(gameObject);
+    }
 
     protected override void Attack()
     {

@@ -18,7 +18,6 @@ public class DefenderRotationUI : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        Hide();
 
         rotateLeftButton.onClick.AddListener(() => RotateDefender(-90f));
         rotateRightButton.onClick.AddListener(() => RotateDefender(90f));
@@ -54,6 +53,8 @@ public class DefenderRotationUI : MonoBehaviour
     public void Hide()
     {
         panel.SetActive(false);
+        
+        TowerStatsUI.Instance.Hide();
         
         if (currentDefender != null)
         {

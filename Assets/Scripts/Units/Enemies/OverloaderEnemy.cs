@@ -6,8 +6,23 @@ public class OverloaderEnemy : EnemyUnit
     public GameObject projectilePrefab;
     public Transform firePoint;
     
+    [Header("Explosion Effect")]
+    public float explosionSpeed = 0.1f;
+    private Renderer targetRenderer;
+    
     public float explosionRadius = 2.5f;
     public float explosionDamage = 30f;
+    
+    private float explosionProgress = 0f;
+    private bool exploding = false;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        // Find the Renderer in children
+        targetRenderer = GetComponentInChildren<Renderer>();
+    }
 
     protected override void Attack()
     {
@@ -43,11 +58,30 @@ public class OverloaderEnemy : EnemyUnit
 
     protected override void Die()
     {
+        exploding = true;
+        
         // Explosion on death before actual destroy
         ExplodeOnDeath();
 
-        // Give reward + destroy
+        // Give reward
         base.Die();
+    }
+    
+    protected override void Update()
+    {
+        base.Update();
+        
+        if (exploding && targetRenderer != null)
+        {
+            explosionProgress = Mathf.MoveTowards(explosionProgress, 1f, Time.deltaTime * explosionSpeed);
+
+            targetRenderer.material.SetFloat("_ExplosionStrength", explosionProgress);
+
+            if (explosionProgress >= 1f)
+            {
+                Destroy(gameObject); // cleanup after animation finishes
+            }
+        }
     }
 
     private void ExplodeOnDeath()

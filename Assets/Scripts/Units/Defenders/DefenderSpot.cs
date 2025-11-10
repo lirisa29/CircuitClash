@@ -20,6 +20,7 @@ public class DefenderSpot : MonoBehaviour, IPointerClickHandler
         if (currentDefender == null)
         {
             DefenderRotationUI.Instance.Hide();
+            TowerStatsUI.Instance.Hide();
             // Show selection menu with defenders for this spot
             DefenderSelectionUI.Instance.Show(availableDefenders, this);
         }
@@ -28,6 +29,7 @@ public class DefenderSpot : MonoBehaviour, IPointerClickHandler
             DefenderSelectionUI.Instance.Hide();
             // Show rotation menu for the placed defender
             DefenderRotationUI.Instance.Show(currentDefender, this);
+            TowerStatsUI.Instance.Show(currentDefender);
         }
     }
 
@@ -36,13 +38,14 @@ public class DefenderSpot : MonoBehaviour, IPointerClickHandler
         if (defenderPreview != null) Destroy(defenderPreview);
 
         // Offset the defender's Y-position by +1.5
-        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
 
         // Spawn the defender prefab
         defenderPreview = Instantiate(data.defenderPrefab, spawnPos, Quaternion.identity);
         currentDefender = defenderPreview;
 
         DefenderRotationUI.Instance.Show(currentDefender, this);
+        TowerStatsUI.Instance.Show(currentDefender);
     }
 
     public void DestroyDefender()

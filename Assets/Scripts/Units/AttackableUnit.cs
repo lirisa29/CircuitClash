@@ -45,7 +45,7 @@ public abstract class AttackableUnit : MonoBehaviour
         }
     }
 
-    private void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
         if (healthBar != null)
         {

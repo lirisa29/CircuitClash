@@ -6,24 +6,49 @@
   <component name="ChangeListManager">
     <list default="true" id="4f55939b-3177-4469-99a6-99cfb9d9fcf9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CircuitClash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CircuitClash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Enemies/BitBug/Material.001.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Enemies/BitBug/Material.001.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Enemies/TrojanHorse/Material.001.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Enemies/TrojanHorse/Material.001.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Models/Overloader.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Models/Overloader.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Models/Overloader.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Models/Overloader.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-1jaAB SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-1jaAB SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-R9JZ6 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/voltsrom-font/VoltsromRegular-R9JZ6 SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defenders/CapacitorDefender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Defenders/CapacitorDefender.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defenders/InductorDefender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Defenders/InductorDefender.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Defenders/ResistorDefender.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Defenders/ResistorDefender.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BitBugEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BitBugEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/OverloaderEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/OverloaderEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/TrojanHorseEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/TrojanHorseEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/bullet.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Map/Tower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/InductorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/InductorData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ResistorData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/ResistorData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/AStarPathFinder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/AStarPathFinder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/GridManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/GridManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/TileData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/TileData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/WfcUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProceduralGeneration/WfcUtils.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderRotationUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DefenderRotationUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/InductorDefender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/InductorDefender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/AttackableUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/AttackableUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderSpot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/DefenderUnit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/ResistorDefender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Defenders/ResistorDefender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/BitBugEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/BitBugEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/EnemyUnit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/OverloaderEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/OverloaderEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/TrojanHorseEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Enemies/TrojanHorseEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Tower/TowerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Tower/TowerUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +70,9 @@
     &quot;accountId&quot;: &quot;df9d0b41-7b89-480a-93ee-7bba36e3c846&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/IUpgradeableUnit.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -129,7 +157,18 @@
       <workItem from="1760358700672" duration="8722000" />
       <workItem from="1760446030176" duration="12211000" />
       <workItem from="1760500966113" duration="17898000" />
-      <workItem from="1760546632540" duration="1227000" />
+      <workItem from="1760546632540" duration="5251000" />
+      <workItem from="1762318942548" duration="1795000" />
+      <workItem from="1762321620159" duration="44000" />
+      <workItem from="1762351922940" duration="2489000" />
+      <workItem from="1762433106797" duration="2691000" />
+      <workItem from="1762538085317" duration="4464000" />
+      <workItem from="1762592759715" duration="2803000" />
+      <workItem from="1762671629230" duration="10763000" />
+      <workItem from="1762696344607" duration="12744000" />
+      <workItem from="1762752470296" duration="9425000" />
+      <workItem from="1762776903652" duration="658000" />
+      <workItem from="1762783439452" duration="2035000" />
     </task>
     <task id="LOCAL-00001" summary="Added additional defender and enemy types">
       <option name="closed" value="true" />
@@ -139,7 +178,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760382988576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated enemy spawner">
+      <option name="closed" value="true" />
+      <created>1760552536259</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760552536259</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added enemy models">
+      <option name="closed" value="true" />
+      <created>1760552555477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760552555477</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +211,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added additional defender and enemy types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added additional defender and enemy types" />
+    <MESSAGE value="Updated enemy spawner" />
+    <MESSAGE value="Added enemy models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enemy models" />
   </component>
 </project>

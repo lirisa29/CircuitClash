@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class DefenderUnit : AttackableUnit
+public class DefenderUnit : AttackableUnit, IUpgradeableUnit
 {
     [Header("Defender Settings")]
     public float damage = 20f;
@@ -13,6 +13,7 @@ public class DefenderUnit : AttackableUnit
 
     [Header("Laser Settings")]
     [SerializeField] private LineRenderer laserRenderer;
+    public ParticleSystem impactEffect;
     public Transform firePoint;
 
     [Header("Overclock Settings")]
@@ -20,16 +21,29 @@ public class DefenderUnit : AttackableUnit
     public float overclockDuration = 10f;
     private float overclockTimer;
     
+    [Header("Upgrade Settings")]
+    public int upgradeLevel = 0;
+    public int maxUpgrades = 2;
+    public int baseUpgradeCost = 50;
+    public float healthUpgradeMultiplier = 1.25f;
+    public float damageUpgradeMultiplier = 1.2f;
+    [SerializeField] private GameObject[] upgradeMeshes;
+    
     private int wavesSurvivedAlive = 0; 
     private MeshRenderer[] meshRenderers;
     private Color originalColor;
     public Color overclockGlowColor = Color.cyan;
+    
+    public float MaxHealth => maxHealth;
     
     protected virtual void Awake()
     {
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         if (meshRenderers.Length > 0)
             originalColor = meshRenderers[0].material.color;
+        
+        // Update mesh
+        UpdateMeshForUpgrade();
     }
 
     protected virtual void Update()
@@ -137,6 +151,17 @@ public class DefenderUnit : AttackableUnit
         // Draw visible laser
         if (laserRenderer != null)
         {
+            RaycastHit hit;
+            Vector3 dir = (target.transform.position - firePoint.position).normalized;
+            Vector3 hitPos = target.transform.position;
+
+            if (Physics.Raycast(firePoint.position, dir, out hit, range, enemyLayer))
+            {
+                hitPos = hit.point; // surface position
+            }
+
+            impactEffect.transform.position = hitPos;
+            
             StartCoroutine(LaserEffect(target.transform.position));
         }
     }
@@ -144,6 +169,8 @@ public class DefenderUnit : AttackableUnit
     private IEnumerator LaserEffect(Vector3 hitPos)
     {
         laserRenderer.enabled = true;
+        impactEffect.Play();
+        
         laserRenderer.SetPosition(0, firePoint.position);
         laserRenderer.SetPosition(1, hitPos);
 
@@ -153,4 +180,47 @@ public class DefenderUnit : AttackableUnit
     }
 
     protected override void Attack() { }
+    
+    public int GetUpgradeCost()
+    {
+        return baseUpgradeCost * (upgradeLevel + 1);
+    }
+    
+    public bool CanUpgrade()
+    {
+        return upgradeLevel < maxUpgrades;
+    }
+    
+    public virtual void Upgrade()
+    {
+        if (!CanUpgrade()) return;
+        
+        upgradeLevel++;
+        
+        // Upgrade stats
+        maxHealth *= healthUpgradeMultiplier;
+        currentHealth = maxHealth;
+        damage *= damageUpgradeMultiplier;
+
+        UpdateHealthBar();
+        
+        // Update mesh
+        UpdateMeshForUpgrade();
+    }
+    
+    public virtual string GetSecondaryStatText()
+    {
+        return $"Damage: {damage:F0}";
+    }
+    
+    public void UpdateMeshForUpgrade()
+    {
+        if (upgradeMeshes == null || upgradeMeshes.Length == 0)
+            return;
+
+        for (int i = 0; i < upgradeMeshes.Length; i++)
+        {
+            upgradeMeshes[i].SetActive(i == upgradeLevel); // only show the current upgrade level
+        }
+    }
 }

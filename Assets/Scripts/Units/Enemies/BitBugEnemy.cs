@@ -6,6 +6,13 @@ public class BitBugEnemy : EnemyUnit
     public GameObject projectilePrefab;
     public Transform firePoint;
 
+    protected override void Die()
+    {
+        base.Die();
+        
+        Destroy(gameObject);
+    }
+
     protected override void Attack()
     {
         Collider target = CheckIfTowerInRange();

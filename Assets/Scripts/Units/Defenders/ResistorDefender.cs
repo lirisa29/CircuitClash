@@ -10,6 +10,8 @@ public class ResistorDefender : DefenderUnit
     public float slowDuration = 2f;     // seconds
     public float stunDuration = 1f;     // overclock only
     
+    public float slowDurationMultiplier = 1.25f;
+    
     private int lastTargetIndex = -1;
 
     protected override void Update()
@@ -75,5 +77,28 @@ public class ResistorDefender : DefenderUnit
         }
 
         return null;
+    }
+    
+    public override void Upgrade()
+    {
+        if (!CanUpgrade()) return;
+        
+        upgradeLevel++;
+        
+        // Upgrade stats
+        maxHealth += healthUpgradeMultiplier;
+        currentHealth = maxHealth;
+        
+        slowDuration *= slowDurationMultiplier;
+        
+        UpdateHealthBar();
+        
+        // Update mesh
+        UpdateMeshForUpgrade();
+    }
+    
+    public override string GetSecondaryStatText()
+    {
+        return $"Slow Duration: {slowDuration:F1}s";
     }
 }
